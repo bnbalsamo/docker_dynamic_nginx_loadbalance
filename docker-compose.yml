@@ -1,0 +1,11 @@
+version: '2'
+services:
+    web_app:
+        build: ./webapp/
+        expose:
+            - "8910"
+
+    loadbalancer:
+        build: ./loadbalancer/
+        ports:
+            - "8080:8080"
